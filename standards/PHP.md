@@ -187,7 +187,8 @@ function foo()
 }
 
 // conditional declaration is *not* a side effect
-if (! function_exists('bar')) {
+if (! function_exists('bar'))
+{
     function bar()
     {
         // function body
@@ -486,8 +487,7 @@ is indented once. When doing so, the first item in the list MUST be on the
 next line, and there MUST be only one argument per line.
 
 When the argument list is split across multiple lines, the closing parenthesis
-and opening brace MUST be placed together on their own line with one space
-between them.
+and opening brace MUST be placed on their own lines.
 
 ```php
 <?php
@@ -499,7 +499,8 @@ class ClassName
         ClassTypeHint $arg1,
         &$arg2,
         array $arg3 = []
-    ) {
+    )
+    {
         // method body
     }
 }
