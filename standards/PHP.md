@@ -214,7 +214,7 @@ blocks of code.
 There MUST NOT be more than one statement per line.
 
 
-### 2.6. Indenting and Alignment
+### 2.6. Indentation and Alignment
 
 Tabs MUST be used for indentation, and spaces MUST NOT be used for indentation.
 
