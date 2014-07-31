@@ -37,7 +37,7 @@ interpreted as described in [RFC 2119].
 
 - Code *indentation* MUST use tabs, not spaces.
 
-- Inner-line code *alingment* MUST use spaces, not tabs.
+- Inner-line code *alignment* MUST use spaces, not tabs.
 
 - There MUST NOT be a hard limit on line length; the soft limit MUST be 120
   characters; lines SHOULD be 80 characters or less.
