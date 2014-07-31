@@ -304,7 +304,7 @@ the class name + “.php”.
 Class names MUST be declared in `StudlyCaps`.
 
 
-### 4.3. Extends and Implements
+### 4.3. `extends` and `implements`
 
 The `extends` and `implements` keywords MUST be declared on the same line as
 the class name.
@@ -364,14 +364,14 @@ namespace Craft;
 
 class DateTime extends \DateTime
 {
-	const W3C_DATE = 'Y-m-d';
-	const MYSQL_DATETIME = 'Y-m-d H:i:s';
-	const UTC = 'UTC';
-	const DATEFIELD_24HOUR = 'Y-m-d H:i';
-	const DATEFIELD_12HOUR = 'Y-m-d h:i A';
+    const W3C_DATE = 'Y-m-d';
+    const MYSQL_DATETIME = 'Y-m-d H:i:s';
+    const UTC = 'UTC';
+    const DATEFIELD_24HOUR = 'Y-m-d H:i';
+    const DATEFIELD_12HOUR = 'Y-m-d h:i A';
 
-	public static function __toString()
-	// ...
+    public static function __toString()
+    // ...
 }
 ```
 
