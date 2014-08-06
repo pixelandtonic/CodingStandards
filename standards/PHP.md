@@ -260,6 +260,64 @@ The PHP constants `true`, `false`, and `null` MUST be in lower case.
 [keywords]: http://php.net/manual/en/reserved.keywords.php
 
 
+### 2.8. Strings
+
+Strings MUST use single quote delimiters (e.g. `'string'`, not `"string"`)
+*unless* the string contains escaped special characters (e.g. `\n`) and/or the
+string is outputting variables (e.g. `"hey {$name}"`).
+
+Variable names within strings MUST be delimited with braces (e.g.
+`"hey {$name}"`, not `"hey $name"`).
+
+String concatenation using the dot operator MUST NOT have spaces on either side
+of the dot (e.g. `'hey '.$name`, not `'hey ' . $name`).
+
+Strings MAY be concatenated across multiple lines, where each subsequent line is
+indented once. When doing so, the dot operators MUST be placed at the ends of
+the lines, with a single space before it.
+
+```php
+<?php
+$string = 'Hello, '.$name."\n" .
+    "Not {$name}? <a href="{$logoutUrl}">Logout</a>";
+```
+
+
+### 2.9. Comments
+
+Each class, property, and method SHOULD have DocBlock-style comments.
+
+“Heading Level 1 comments”, which act as a heading for one or more methods
+following it, SHOULD use this style:
+
+```php
+// Public Methods
+// =============================================================================
+```
+
+“Heading Level 2” comments, which act as a heading for a group of lines of
+logical code, SHOULD use this style:
+
+```php
+// Create the field layout
+// -----------------------------------------------------------------------------
+```
+
+“Heading Level 3” comments, which explain what’s going on in the following
+line(s), SHOULD use this style:
+
+```php
+// Does an entry exist yet?
+```
+
+Heading Level 1 and 2 comments MUST have at least one blank line before and
+after them. They SHOULD stretch 80 characters out (minus 4 characters for each
+indentation level).
+
+Heading Level 3 comments MUST have at least one blank line before them, and they
+SHOULD NOT have any blank lines after them.
+
+
 
 3. Namespace and Use Declarations
 ---------------------------------
