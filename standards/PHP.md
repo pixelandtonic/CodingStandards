@@ -285,7 +285,126 @@ $string = 'Hello, '.$name."\n" .
 
 ### 2.9. Comments
 
-Each class, property, and method SHOULD have DocBlock-style comments.
+Each class, property, and method MUST have DocBlock-style comments.
+
+**Classes and Interfaces**
+
+Class and interface DocBlock comments MUST have the following format:
+
+```php
+    /**
+     * One or two line short description about the class.
+     *
+     * Much longer in-depth description of the class that follows the ever important
+     * 80 character soft limit and 120 character hard limit.
+     *
+     * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
+     * @copyright Copyright (c) 2014, Pixel & Tonic, Inc.
+     * @license   http://buildwithcraft.com/license Craft License Agreement
+     * @link      http://buildwithcraft.com
+     * @package   craft.app.etc.templating
+     * @since     1.0
+     */
+```
+
+**Methods**
+
+Method DocBlock commends MUST have the following format:
+
+```php
+/**
+ * One or two line short description about the method.
+ *
+ * Much longer in-depth description of the method  that follows the ever important
+ * 80 character soft limit and 120 character hard limit.
+ *
+ * @param AssetFolderModel $newLocation  The assetFolderModel representing the
+ *                                       new location for the folder mirror.
+ * @param string|null      $sourcePath   The path on disk to the source folder.
+ * @param array            $changedData  Any data that changed during the mirroring
+ *                                       operation.
+ *
+ * @deprecated Deprecated in 1.3. Use {@link AppBehavior::getBuild() craft()->getBuild()} instead.
+ *             Other important deprecation information.
+ * @throws Exception|HttpException
+ * @return bool|null true if the method was successful, false if not. A null
+ *                   value will be returned if it's Tuesday.
+ */
+ ```
+
+All short descriptions, long descriptions, parameter descriptions, deprecation
+descriptions and return descriptions MUST follow the 80 character soft limit and
+120 character hard limit. When referring to to other methods, classes or
+properties in the same class, or other classes, the `@link` tag SHOULD be used.
+
+**Specifying types**
+
+For a list of valid types, see http://www.phpdoc.org/docs/latest/guides/types.html.
+
+When specifying types, `int` MUST be used instead of `integer` and `bool` MUST
+be used instead of `boolean`.
+
+When specifying an array of types, the `int[]` or `Object[]` syntax MUST be
+used.
+
+**@param tag**
+
+There MUST be a blank line before and after the @param tag declarations.
+
+If a method parameter specifies a default (i.e. `$string = null`) the type for
+that @param MUST be specified like `string|null`.
+
+If multiple @param tags are used, then they MUST aligned vertically on the type,
+the parameter name and the description.
+
+**@return tag**
+
+There MUST be a @return tag that specifies the type that gets returned.
+
+If a method does not explicitly return anything, `@return null` must be used.
+
+The @return tag MUST always be the last tag to be listed.
+
+If a method returns more than one type, they MUST be separated by a `|`.
+i.e. `@return bool|null`.
+
+The return MUST specify a description of what is being returned. If the
+description spans multiple lines, it MUST be aligned on the beginning of the
+description text.
+
+**@throws tag**
+
+If a method throws an exception, the @throws tag MUST be specified.
+
+If a method throws more that one type of exception, they must be separated by a
+`|`. i.e. `@throws Exception|HttpException`.
+
+**@deprecated tag**
+
+If a method has been deprecated, the @deprecated tag MUST be used specifying
+the version the method was deprecated in and, if applicable, an alternative
+method or process to use instead.
+
+If the description spans multiple lines, it MUST be aligned on the beginning of
+the description text.
+
+**@abstract, @static, @implements and @access tags**
+
+These tags are obsolete and MUST not be used.
+
+**Properties**
+
+Property DocBlock commends MUST have the following format:
+
+```php
+/**
+ * Whether to allow the Limit setting.
+ *
+ * @var string|null $allowLimit = null
+ */
+```
+The property description MUST be above the @var tag and there MUST be a blank
+line between them.
 
 “Heading Level 1 comments”, which act as a heading for one or more methods
 following it, SHOULD use this style:
