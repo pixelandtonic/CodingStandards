@@ -384,7 +384,7 @@ If a method throws more that one type of exception, they must be separated by a
 
 **@deprecated tag**
 
-If a method has been deprecated, the @deprecated tag MUST be used specifying
+If a method has been deprecated, the `@deprecated` tag MUST be used specifying
 the version the method was deprecated in and, if applicable, an alternative
 method or process to use instead.
 
@@ -409,24 +409,27 @@ Property DocBlock commends MUST have the following format:
 The property description MUST be above the `@var` tag and there MUST be a blank
 line between them.
 
-“Heading Level 1 comments”, which act as a heading for one or more methods
-following it, SHOULD use this style:
+**Heading Level 1 comments**
+
+Act as a heading for one or more methods following it, SHOULD use this style:
 
 ```php
 // Public Methods
 // =============================================================================
 ```
 
-“Heading Level 2” comments, which act as a heading for a group of lines of
-logical code, SHOULD use this style:
+**Heading Level 2 comments**
+
+Act as a heading for a group of lines of logical code, SHOULD use this style:
 
 ```php
 // Create the field layout
 // -----------------------------------------------------------------------------
 ```
 
-“Heading Level 3” comments, which explain what’s going on in the following
-line(s), SHOULD use this style:
+**Heading Level 3 comments**
+
+Explain what’s going on in the following line(s), SHOULD use this style:
 
 ```php
 // Does an entry exist yet?
