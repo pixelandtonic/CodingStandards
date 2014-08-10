@@ -307,9 +307,12 @@ Class and interface DocBlock comments MUST have the following format:
      */
 ```
 
+`@author`, `@copyright`, `@license`, `@link`, `@package` and `@since` SHOULD all
+be specified.
+
 **Methods**
 
-Method DocBlock commends MUST have the following format:
+Method DocBlock comments MUST have the following format:
 
 ```php
 /**
@@ -349,21 +352,21 @@ used.
 
 **@param tag**
 
-There MUST be a blank line before and after the @param tag declarations.
+There MUST be a blank line before and after the `@param` tag declarations.
 
 If a method parameter specifies a default (i.e. `$string = null`) the type for
-that @param MUST be specified like `string|null`.
+that `@param` MUST be specified like `string|null`.
 
-If multiple @param tags are used, then they MUST aligned vertically on the type,
+If multiple `@param` tags are used, then they MUST aligned vertically on the type,
 the parameter name and the description.
 
 **@return tag**
 
-There MUST be a @return tag that specifies the type that gets returned.
+There MUST be a `@return` tag that specifies the type that gets returned.
 
 If a method does not explicitly return anything, `@return null` must be used.
 
-The @return tag MUST always be the last tag to be listed.
+The `@return` tag MUST always be the last tag to be listed.
 
 If a method returns more than one type, they MUST be separated by a `|`.
 i.e. `@return bool|null`.
@@ -374,7 +377,7 @@ description text.
 
 **@throws tag**
 
-If a method throws an exception, the @throws tag MUST be specified.
+If a method throws an exception, the `@throws` tag MUST be specified.
 
 If a method throws more that one type of exception, they must be separated by a
 `|`. i.e. `@throws Exception|HttpException`.
@@ -403,7 +406,7 @@ Property DocBlock commends MUST have the following format:
  * @var string|null $allowLimit = null
  */
 ```
-The property description MUST be above the @var tag and there MUST be a blank
+The property description MUST be above the `@var` tag and there MUST be a blank
 line between them.
 
 “Heading Level 1 comments”, which act as a heading for one or more methods
