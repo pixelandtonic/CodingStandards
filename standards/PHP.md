@@ -292,19 +292,20 @@ Each class, property, and method MUST have DocBlock-style comments.
 Class and interface DocBlock comments MUST have the following format:
 
 ```php
-    /**
-     * One or two line short description about the class.
-     *
-     * Much longer in-depth description of the class that follows the ever important
-     * 80 character soft limit and 120 character hard limit.
-     *
-     * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
-     * @copyright Copyright (c) 2014, Pixel & Tonic, Inc.
-     * @license   http://buildwithcraft.com/license Craft License Agreement
-     * @link      http://buildwithcraft.com
-     * @package   craft.app.etc.templating
-     * @since     1.0
-     */
+<?php
+/**
+ * One or two line short description about the class.
+ *
+ * Much longer in-depth description of the class that follows the ever important
+ * 80 character soft limit and 120 character hard limit.
+ *
+ * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
+ * @copyright Copyright (c) 2014, Pixel & Tonic, Inc.
+ * @license   http://buildwithcraft.com/license Craft License Agreement
+ * @link      http://buildwithcraft.com
+ * @package   craft.app.etc.templating
+ * @since     1.0
+ */
 ```
 
 `@author`, `@copyright`, `@license`, `@link`, `@package` and `@since` SHOULD all
@@ -315,6 +316,7 @@ be specified.
 Method DocBlock comments MUST have the following format:
 
 ```php
+<?php
 /**
  * One or two line short description about the method.
  *
