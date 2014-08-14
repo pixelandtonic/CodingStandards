@@ -292,19 +292,19 @@ Each class, property, and method MUST have DocBlock-style comments.
 Class and interface DocBlock comments MUST have the following format:
 
 ```php
-    /**
-     * One or two line short description about the class.
-     *
-     * Much longer in-depth description of the class that follows the ever important
-     * 80 character soft limit and 120 character hard limit.
-     *
-     * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
-     * @copyright Copyright (c) 2014, Pixel & Tonic, Inc.
-     * @license   http://buildwithcraft.com/license Craft License Agreement
-     * @link      http://buildwithcraft.com
-     * @package   craft.app.etc.templating
-     * @since     1.0
-     */
+/**
+ * One or two line short description about the class.
+ *
+ * Much longer in-depth description of the class that goes into great details about its functionality that follows the
+ * ever important 120 character hard limit.
+ *
+ * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
+ * @copyright Copyright (c) 2014, Pixel & Tonic, Inc.
+ * @license   http://buildwithcraft.com/license Craft License Agreement
+ * @link      http://buildwithcraft.com
+ * @package   craft.app.etc.templating
+ * @since     1.0
+ */
 ```
 
 `@author`, `@copyright`, `@license`, `@link`, `@package` and `@since` SHOULD all
@@ -318,27 +318,26 @@ Method DocBlock comments MUST have the following format:
 /**
  * One or two line short description about the method.
  *
- * Much longer in-depth description of the method  that follows the ever important
- * 80 character soft limit and 120 character hard limit.
+ * Much longer in-depth description of the class that goes into great details about its functionality that follows the
+ * ever important 120 character hard limit.
  *
- * @param AssetFolderModel $newLocation  The assetFolderModel representing the
- *                                       new location for the folder mirror.
+ * @param AssetFolderModel $newLocation  The assetFolderModel representing the new location for the folder mirror. If
+ *                                       none is specified, bad things will happen.
  * @param string|null      $sourcePath   The path on disk to the source folder.
- * @param array            $changedData  Any data that changed during the mirroring
- *                                       operation.
+ * @param array            $changedData  Any data that changed during the mirroring operation.
  *
- * @deprecated Deprecated in 1.3. Use {@link AppBehavior::getBuild() craft()->getBuild()} instead.
- *             Other important deprecation information.
+ * @deprecated Deprecated in 1.3. Use {@link AppBehavior::getBuild() craft()->getBuild()} instead. This is now old and
+ *             busted. Other important deprecation information.
  * @throws Exception|HttpException
- * @return bool|null true if the method was successful, false if not. A null
- *                   value will be returned if it's Tuesday.
+ * @return bool|null true if the method was successful, false if not. A null value will be returned if it's Tuesday.
+ *                   However, on Thursdays and full-moons, it will always be true.
  */
  ```
 
 All short descriptions, long descriptions, parameter descriptions, deprecation
-descriptions and return descriptions MUST follow the 80 character soft limit and
-120 character hard limit. When referring to to other methods, classes or
-properties in the same class, or other classes, the `@link` tag SHOULD be used.
+descriptions and return descriptions MUST follow the 120 character hard limit.
+When referring to to other methods, classes or properties in the same class,
+or other classes, the `@link` tag SHOULD be used.
 
 **Specifying types**
 
