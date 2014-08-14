@@ -292,6 +292,7 @@ Each class, property, and method MUST have DocBlock-style comments.
 Class and interface DocBlock comments MUST have the following format:
 
 ```php
+<?php
 /**
  * One or two line short description about the class.
  *
@@ -315,6 +316,7 @@ be specified.
 Method DocBlock comments MUST have the following format:
 
 ```php
+<?php
 /**
  * One or two line short description about the method.
  *
