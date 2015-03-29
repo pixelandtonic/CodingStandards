@@ -59,8 +59,8 @@ interpreted as described in [RFC 2119].
   exist at the very beginning/ending of the body of another function or control
   structure.
 
-- Control structure keywords MUST NOT use their [alternative syntaxes] (`elseif`,
-  `endif`, etc.).
+- Control structure keywords MUST NOT use their [alternative syntaxes](alternative syntaxes) 
+  (`elseif`, `endif`, etc.).
 
 - Control structure keywords MUST have one space after them; method and
   function calls MUST NOT.
