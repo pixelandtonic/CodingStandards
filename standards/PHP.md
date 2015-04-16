@@ -279,7 +279,7 @@ the lines, with a single space before it.
 ```php
 <?php
 $string = 'Hello, '.$name."\n" .
-    "Not {$name}? <a href="{$logoutUrl}">Logout</a>";
+    "Not {$name}? <a href=\"{$logoutUrl}\">Logout</a>";
 ```
 
 
